@@ -1,0 +1,206 @@
+<html>
+<head>
+    <title>BIRO</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Home Screen -->
+
+    <section id="homescreen" class="screen">
+
+        <header class="screen-header">
+            <img src="/BIRO/Assets/Logo/BIRO.svg" alt="BIRO Logo" class="logo">
+        </header>
+
+        <main class="screen-main">
+            <h1>Your AI study assistant</h1>
+            <textarea id="input" aria-label="Insert your text here" placeholder="Insert your text here..."></textarea>
+        </main>
+
+        <div class="action-buttons-3">
+            <button type="button" id="summary-btn"><img src="/BIRO/Assets/Icons/SummaryIcon.svg" alt="Summary Icon"></button>
+            <button type="button" id="flashcard-btn"><img src="/BIRO/Assets/Icons/FlashcardIcon.svg" alt="Flashcards Icon"></button>
+            <button type="button" id="quiz-btn"><img src="/BIRO/Assets/Icons/QuizIcon.svg" alt="Quiz Icon"></button>
+            <span>SUMMARY</span>
+            <span>FLASHCARDS</span>
+            <span>QUIZ</span>
+        </div>
+
+    </section>
+
+    <!-- Loading Screen -->
+
+    <section id="loadingscreen" class="screen hidden">
+
+        <header class="screen-header">
+            <button type="button" class="cancel"><img src="/BIRO/Assets/Icons/CancelIcon.svg" alt="Cancel Icon"></button>
+            <img src="/BIRO/Assets/Logo/BIRO.svg" alt="BIRO Logo" class="logo">
+        </header>
+
+        <main class="screen-main">
+            <div class="loader">
+                <img src="/BIRO/Assets/Icons/LoadingIcon.svg" alt="Loading Icon" id="loading-icon">
+            </div>
+        </main>
+
+    </section>
+
+    <!-- Error Screen -->
+
+    <section id="errorscreen" class="screen hidden">
+
+        <header class="screen-header">
+            <button type="button" class="cancel"><img src="/BIRO/Assets/Icons/CancelIcon.svg" alt="Cancel Icon"></button>
+            <img src="/BIRO/Assets/Logo/BIRO.svg" alt="BIRO Logo" class="logo">
+        </header>
+
+        <main class="screen-main">
+            <figure class="error">
+                <img src="/BIRO/Assets/Icons/ErrorIcon.svg" alt="Error Icon">
+                <figcaption>Something went wrong. Please try again.</figcaption>
+            </figure>
+        </main>
+
+    </section>
+
+    <!-- Summary Screen -->
+
+    <section id="summaryscreen" class="screen hidden">
+
+        <header class="screen-header">
+            <button type="button" class="cancel"><img src="/BIRO/Assets/Icons/CancelIcon.svg" alt="Cancel Icon"></button>
+            <img src="/BIRO/Assets/Logo/BIRO.svg" alt="BIRO Logo" class="logo">
+        </header>
+
+        <main class="screen-main">
+            <div class="summary-container">
+                <h2>SUMMARY</h2>
+                <p id="summary-card">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br>
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br>
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br>
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+        </main>
+
+        <div class="action-buttons-2">
+            <button type="button" id="regenerate-summary"><img src="/BIRO/Assets/Icons/RegenerateIcon.svg" alt="Regenerate Icon"></button>
+            <button type="button" id="copy-summary"><img src="/BIRO/Assets/Icons/CopyIcon.svg" alt="Copy Icon"></button>
+            <span>REGENERATE</span>
+            <span>COPY</span>
+        </div>
+
+    </section>
+
+    <!-- Flashcard Screen -->
+
+    <section id="flashcardscreen" class="screen hidden">
+
+        <header class="screen-header">
+            <button type="button" class="cancel"><img src="/BIRO/Assets/Icons/CancelIcon.svg" alt="Cancel Icon"></button>
+            <img src="/BIRO/Assets/Logo/BIRO.svg" alt="BIRO Logo" class="logo">
+        </header>
+
+        <main class="screen-main">
+            <div class="flashcard-container">
+                <h2>FLASHCARDS</h2>
+                <p id="flashcard-question">What is the capital of France?</p>
+            </div>
+        </main>
+
+        <div class="action-buttons-2">
+            <button type="button" id="view-answer"><img src="/BIRO/Assets/Icons/EyeIcon.svg" alt="View Answer Icon"></button>
+            <button type="button" id="next-flashcard"><img src="/BIRO/Assets/Icons/NextIcon.svg" alt="Next Icon"></button>
+            <span>VIEW ANSWER</span>
+            <span>NEXT</span>
+        </div>
+
+    </section>
+
+    <!-- Flashcard Answer Screen -->
+
+    <section id="flashcardanswerscreen" class="screen hidden">
+
+        <header class="screen-header">
+            <button type="button" class="cancel"><img src="/BIRO/Assets/Icons/CancelIcon.svg" alt="Cancel Icon"></button>
+            <img src="/BIRO/Assets/Logo/BIRO.svg" alt="BIRO Logo" class="logo">
+        </header>
+
+        <main class="screen-main">
+            <div class="flashcard-container">
+                <h2>FLASHCARDS</h2>
+                <p id="flashcard-answer">Paris</p>
+            </div>
+        </main>
+
+        <div class="action-buttons-2">
+            <button type="button" id="view-answer"><img src="/BIRO/Assets/Icons/EyeIcon.svg" alt="View Answer Icon"></button>
+            <button type="button" id="next-flashcard"><img src="/BIRO/Assets/Icons/NextIcon.svg" alt="Next Icon"></button>
+            <span>VIEW ANSWER</span>
+            <span>NEXT</span>
+        </div>
+
+    </section>
+
+
+    <!-- Quiz Screen -->
+
+    <section id="quizscreen" class="screen hidden">
+
+        <header class="screen-header">
+            <button type="button" class="cancel"><img src="/BIRO/Assets/Icons/CancelIcon.svg" alt="Cancel Icon"></button>
+            <img src="/BIRO/Assets/Logo/BIRO.svg" alt="BIRO Logo" class="logo">
+        </header>
+
+        <main class="screen-main">
+            <div class="quiz-container">
+                <h2>QUIZ</h2>
+                <div id="quiz-box">
+                    <p id="quiz-question">
+                        What is the largest planet in our solar system?
+                    </p>
+                    <ul id="quiz-options">
+                        <li><input type="radio" name="quiz-option" id="quiz-option-1"><label for="quiz-option-1">Jupiter</label></li>
+                        <li><input type="radio" name="quiz-option" id="quiz-option-2"><label for="quiz-option-2">Saturn</label></li>
+                        <li><input type="radio" name="quiz-option" id="quiz-option-3"><label for="quiz-option-3">Earth</label></li>
+                        <li><input type="radio" name="quiz-option" id="quiz-option-4"><label for="quiz-option-4">Mars</label></li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <div class="action-buttons-2">
+            <button type="button" id="next-question"><img src="/BIRO/Assets/Icons/NextIcon.svg" alt="Next Icon"></button>
+            <button type="button" id="view-answer-quiz"><img src="/BIRO/Assets/Icons/EyeIcon.svg" alt="View Answer Icon"></button>
+            <span>NEXT</span>
+            <span>REVIEW</span>
+        </div>
+        
+    </section>
+
+    <!-- Quiz Review Screen -->
+
+    <section id="quizreviewscreen" class="screen hidden">
+
+        <header class="screen-header">
+            <button type="button" class="cancel"><img src="/BIRO/Assets/Icons/CancelIcon.svg" alt="Cancel Icon"></button>
+            <img src="/BIRO/Assets/Logo/BIRO.svg" alt="BIRO Logo" class="logo">
+        </header>
+
+        <main class="screen-main">
+            <div class="quiz-container">
+                <h2>QUIZ REVIEW</h2>
+                <div id="quiz-review" class="hidden">
+                    <p id="quiz-score">Your Score: 1/1</p>
+                    <p id="quiz-answer">Correct Answer: Jupiter</p>
+                </div>
+            </div>
+        </main>
+
+    </section>
+</body>
+</html>

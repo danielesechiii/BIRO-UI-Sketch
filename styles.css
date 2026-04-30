@@ -1,0 +1,304 @@
+/* Styles for BIRO application */
+
+/* Variables & Globals */
+:root {
+  --primary-color: #000;
+  --background-color: #ede3e3;
+  --text-color: #000;
+  --font-1: 'Monomaniac One', monospace;
+  --font-2: Arial, sans-serif;
+  --shadow-button: 0px 6px 4px 0px rgba(0, 0, 0, 0.35);
+  --shadow-text: 0px 2px 3px rgba(0, 0, 0, 0.35);
+  --border: 10px solid #000;
+  --border-btn: 5px solid #000;
+  --hover-bg-color: #785F5F;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Screen Styles */
+
+.screen {
+  width: 100%;
+  height: 100dvh;
+}
+
+/* Component Styles */
+
+/* Logo */
+
+.logo {
+  width: 30vw;
+  height: auto;
+  max-width: 200px;
+}
+
+/* Text styles */
+
+h1 {
+  font-family: var(--font-1);
+  color: var(--primary-color);
+  text-shadow: var(--shadow-text);
+  font-size: 2em;
+}
+
+p {
+  font-family: var(--font-2);
+  color: var(--text-color);
+  font-size: 1.35em;
+}
+
+figcaption {
+  font-family: var(--font-2);
+  color: var(--text-color);
+  font-size: 0.80em;
+}
+
+h2 {
+  font-family: var(--font-1);
+  color: var(--primary-color);
+  text-shadow: var(--shadow-text);
+  font-size: 1.75em;
+}
+
+span {
+  font-family: var(--font-1);
+  color: var(--primary-color);
+  text-shadow: var(--shadow-text);
+  font-size: 1.30em;
+}
+
+label {
+  font-family: var(--font-2);
+  color: var(--text-color);
+  font-size: 1.30em;
+}
+
+/* Input Area */
+
+#input {
+  box-sizing: border-box;
+  padding: 2%;
+  resize: auto;
+  height: 50dvh;
+  width: 80vw;
+  font-family: var(--font-2);
+  font-size: 1.35em;
+  border: var(--border);
+  border-radius: 5px;
+  box-shadow: var(--shadow-button);
+  background-color: var(--background-color);
+}
+
+#input::placeholder {
+  font-family: var(--font-2);
+  color: var(--text-color);
+  opacity: 0.5;
+}
+
+/* Summary Card Styles */
+
+#summary-card {
+  box-sizing: border-box;
+  padding: 2%;
+  resize: auto;
+  height: 50dvh;
+  font-family: var(--font-2);
+  border: var(--border);
+  border-radius: 5px;
+  box-shadow: var(--shadow-button);
+  background-color: var(--background-color);
+  overflow-y: scroll;
+}
+
+/* Flashcard Container Styles */
+
+#flashcard-question, #flashcard-answer {
+  box-sizing: border-box;
+  padding: 2%;
+  resize: auto;
+  height: auto;
+  min-width: 40vw;
+  font-family: var(--font-2);
+  font-size: 1.35em;
+  border: var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-button);
+  background-color: var(--background-color);
+}
+
+/* Quiz Container Styles */
+
+#quiz-question, #quiz-options, #quiz-review {
+  box-sizing: border-box;
+  padding: 2%;
+  resize: auto;
+  height: auto;
+  min-width: 40vw;
+  font-family: var(--font-2);
+  font-size: 1.35em;
+  border: var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-button);
+  background-color: var(--background-color);
+}
+
+#quiz-options {
+  list-style-type: none;
+}
+
+/* Button Styles */
+
+button {
+  color: var(--primary-color);
+  background-color: var(--background-color);
+  border: var(--border-btn);
+  box-shadow: var(--shadow-button);
+  border-radius: 50px;
+}
+
+button:hover {
+  background-color: var(--hover-bg-color);
+}
+
+/* Loader Styles */
+
+.loader {
+  animation: spin 1s linear infinite;
+}
+
+/* Layout Styles */
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Header */
+
+.screen-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 2vh;
+  margin-bottom: 3vh;
+}
+
+.cancel {
+  position: absolute;
+  left: 0;
+  margin-left: 2vw;
+}
+
+/* Main Content */
+
+.screen-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3vh;
+}
+
+/* Main Content Home */
+
+#input {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Main Content Loading & Error */
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Main Content Summary */
+
+.summary-card {
+  align-self: center;
+  justify-self: center;
+}
+
+/* Main Content Flashcards */
+
+#flashcard-question, #flashcard-answer {
+  align-self: center;
+  justify-self: center;
+}
+
+#flashcard-answer {
+  margin-top: 2vh;
+}
+
+/* Main Content Quiz */
+
+#quiz-question, #quiz-options, #quiz-review {
+  align-self: center;
+  justify-self: center;
+}
+
+/* Action Buttons */
+
+.action-buttons-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2vw;
+  margin-bottom: 2vh;
+}
+
+.action-buttons-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2vw;
+  margin-bottom: 2vh;  
+}
+
+/* Text layout */
+
+h1 {
+  text-align: center;
+}
+
+p {
+  text-align: justify;
+}
+
+figcaption {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+span {
+  text-align: center;
+}
+
+label {
+  text-align: center;
+}
+
+#flashcard-question, #flashcard-answer {
+  text-align: center;
+}
+
+#quiz-score, #quiz-answer {
+  text-align: center;
+}
